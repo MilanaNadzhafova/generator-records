@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="index.css" />
+  <script src="index.js"></script>
+</head>
+
+<body>
+  <section class="generator-records">
+    <div class="container">
+      <div class="generator-records__row">
+        <button onclick="generateRecords()" class="button">
+          Сгенерировать записи
+        </button>
+        <input id="search" type="text" class="generator-records__input" placeholder="Поиск записей" />
+      </div>
+
+      <div id="progress-bar" class="generator-records__progress-bar">
+        <span id="progress-text">0%</span>
+
+        <div id="progress">
+        </div>
+      </div>
+
+      <div id="container-records" class="generator-records__records-container">
+        <h2 class="generator-records__list-header">Список записей</h2>
+
+        <ul id="list-records" data-hasNext="0" data-offset="0" class="generator-records__list"></ul>
+        <div class="generator-records__pagination">
+          <button id="prevBtn" disabled class="button">&#5176;</button>
+          <button id="nextBtn" class="button">&#5171;</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="generator-records__notification" id="notification">
+      <span id="notificationText" class="generator-records__notification-text"></span>
+    </div>
+  </section>
+</body>
+
+</html>
